@@ -1,1 +1,16 @@
-Toolchains are not configured Configure
+C:\Users\antho\AppData\Local\JetBrains\CLion2020.2\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4"
+-- Configuring done
+CMake Error at CMakeLists.txt:8 (add_executable):
+  Cannot find source file:
+
+    project4.hpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:8 (add_executable):
+  No SOURCES given to target: Project4
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
