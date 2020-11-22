@@ -43,6 +43,9 @@ Transaction::Transaction(std::string ticker_symbol, unsigned int day_date, unsig
 
 Transaction::~Transaction() {
     // destructor calls on delete, or on de-allocation of instance?
+    // clear dynamically allocated things (p_next?)
+    delete p_next;
+    p_next = nullptr;
 
 }
 
@@ -51,7 +54,7 @@ Transaction::~Transaction() {
 // TASK 2
 //
 
-bool Transaction::operator<(Transaction const &other) {
+bool Transaction::operator<(Transaction const &other) { ///this is very important please fix this.
     // how is this supposed to work?
     // find out which transaction happens before the other?
 
@@ -66,19 +69,32 @@ bool Transaction::operator<(Transaction const &other) {
 
     //basically the one on the left is the one we have, and the one on the right is other.
 
-    if (this->day < other.day) { // this->day is equivelent to (*this).day
-///this is only example implementation
-
+    if (this->year < other.year) {
+        //the left one is an entire year smaller, there is no contest.
+        return true;
+    } else if (this-> year == other.year) {
+        //same year so check month
+        if(this->month < other.month) {
+            // the left one is a lesser month, so we're automatically good
+            return true;
+        } else if (this->month == other.month) {
+            //same month so check day
+            if (this->day < other.day) {
+                // left day is less!
+                return true;
+            } else if (this->trans_id < other.trans_id){
+                return true; // is there a case where same day is approved ? -> yes there is
+                //smaller trans id wins.
+            }
+        }
     }
 
-    return true; //at some point you must return both of these.
-    return false;
+    return false; //if nothing else has happened then you just return false!
 }
 
 
 // GIVEN
 // Member functions to get values.
-//
 std::string Transaction::get_symbol() const { return symbol; }
 
 unsigned int Transaction::get_day() const { return day; }
@@ -149,12 +165,24 @@ void Transaction::print() {
 //
 //
 
+// each transaction is a node of the linked list.
+// History is/holds/contains the linked list
+/*
+ * History
+ * p_head --> Transaction
+ *            p_next ---------> Transaction
+ *                              p_next --------> Transaction etc etc etc ---> nullptr
+ *
+ *
+ */
+
 
 // Constructor
 // TASK 3
 //
 
 History::History() {
+    p_head = nullptr;
 
 }
 
@@ -164,7 +192,13 @@ History::History() {
 //
 
 History::~History() {
+    while(p_head != nullptr) {
+        Transaction *p_temp{p_head};
 
+        p_head = p_head->get_next();
+        delete p_temp;
+        p_temp = nullptr;
+    }
 }
 
 
