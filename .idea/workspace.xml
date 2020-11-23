@@ -21,6 +21,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -47,12 +48,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Project4" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project4" TARGET_NAME="Project4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project4" RUN_TARGET_NAME="Project4">
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project4" TARGET_NAME="Project4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project4" RUN_TARGET_NAME="Project4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -82,25 +78,19 @@
       <workItem from="1606054011588" duration="708000" />
       <workItem from="1606063627427" duration="157000" />
       <workItem from="1606064215577" duration="718000" />
-      <workItem from="1606065574532" duration="89000" />
+      <workItem from="1606065574532" duration="799000" />
+      <workItem from="1606148902013" duration="16099000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606149378789">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state x="690" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606149378789" />
     <state x="443" y="187" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606064403715">
       <screen x="0" y="0" width="1527" height="900" />
     </state>
@@ -109,6 +99,22 @@
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
     <state x="1015" y="478" key="FileChooserDialogImpl/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1605726483894" />
+    <state width="1189" height="413" key="GridCell.Tab.0.bottom" timestamp="1606164416200">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state width="1189" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606164416200" />
+    <state width="1189" height="413" key="GridCell.Tab.0.center" timestamp="1606164416200">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state width="1189" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606164416200" />
+    <state width="1189" height="413" key="GridCell.Tab.0.left" timestamp="1606164416200">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state width="1189" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606164416200" />
+    <state width="1189" height="413" key="GridCell.Tab.0.right" timestamp="1606164416200">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state width="1189" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606164416200" />
     <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1605713212330">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
@@ -126,5 +132,15 @@
       <screen x="0" y="0" width="1527" height="900" />
     </state>
     <state x="459" y="275" key="com.intellij.ide.util.TipDialog/0.0.1527.900@0.0.1527.900" timestamp="1606064428460" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/History_Transaction_definitions.cpp</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

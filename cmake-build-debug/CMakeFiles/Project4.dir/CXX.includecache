@@ -38,24 +38,6 @@ iostream
 string
 -
 
-/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/project4.cpp
-cassert
--
-fstream
--
-iomanip
--
-iostream
--
-sstream
--
-string
--
-vector
--
-project4.hpp
-/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/project4.hpp
-
 /cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/project4.hpp
 cassert
 -

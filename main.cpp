@@ -6,6 +6,17 @@
 #ifndef MARMOSET_TESTING
 unsigned int Transaction::assigned_trans_id = 0;
 int main() {
+
+    Transaction first = Transaction("VRGO", 12, 02, 2019, true, 150, 10300.14);
+    Transaction second = Transaction("VRGO", 11, 02, 2019, true, 150, 10300.14);
+    if (first<second) {
+        std::cout<<"first<second"<<std::endl;
+    } else {
+        std::cout<<"second<first"<<std::endl;
+    }
+
+
+
   History trans_history{};
   trans_history.read_history();
 
