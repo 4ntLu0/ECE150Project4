@@ -262,14 +262,15 @@ void History::insert(Transaction *p_new_trans) {
 //            std::cout << "within insert while: " << p_head->get_year() << " " << p_head->get_month() << " " << p_head->get_day() << std::endl;
 //            p_head = p_head->get_next();
 //        }
-        while (p_head != nullptr) {
-            if (p_head->get_next() == nullptr) {
+    Transaction *p_temp = p_head;
+        while (p_temp != nullptr) {
+            if (p_temp->get_next() == nullptr) {
                 std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " "
                           << p_new_trans->get_day() << "get:next" << p_new_trans->get_next() << std::endl;
-                p_head->set_next(p_new_trans);
+                p_temp->set_next(p_new_trans);
                 break;
             }
-            p_head = p_head->get_next();
+            p_temp = p_temp->get_next();
 
         }
 //        std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " " << p_new_trans->get_day() << std::endl;
