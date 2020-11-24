@@ -250,31 +250,25 @@ void History::insert(Transaction *p_new_trans) {
     assert(p_new_trans != nullptr);
     p_new_trans->set_next(nullptr);
     if (p_head == nullptr) {
-        std::cout << "null p_head insert" << std::endl;
-        std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " "
-                  << p_new_trans->get_day() << std::endl;
+//        std::cout << "null p_head insert" << std::endl;
+//        std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " "
+//                  << p_new_trans->get_day() << std::endl;
         p_head = p_new_trans;
         p_head->set_next(nullptr);
-        std::cout << "p_head" << p_head->get_year() << " " << p_head->get_month() << " "
-                  << p_head->get_day() << std::endl;
+//        std::cout << "p_head" << p_head->get_year() << " " << p_head->get_month() << " "
+//                  << p_head->get_day() << std::endl;
     } else {
-//        while (p_head->get_next() != nullptr) {
-//            std::cout << "within insert while: " << p_head->get_year() << " " << p_head->get_month() << " " << p_head->get_day() << std::endl;
-//            p_head = p_head->get_next();
-//        }
-    Transaction *p_temp = p_head;
+        Transaction *p_temp = p_head;
         while (p_temp != nullptr) {
             if (p_temp->get_next() == nullptr) {
-                std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " "
-                          << p_new_trans->get_day() << "get:next" << p_new_trans->get_next() << std::endl;
+//                std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " "
+//                          << p_new_trans->get_day() << "get:next" << p_new_trans->get_next() << std::endl;
                 p_temp->set_next(p_new_trans);
                 break;
             }
             p_temp = p_temp->get_next();
 
         }
-//        std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " " << p_new_trans->get_day() << std::endl;
-//        p_head->set_next(p_new_trans);
     }
 }
 
