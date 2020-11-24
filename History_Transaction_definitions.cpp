@@ -313,13 +313,18 @@ void History::sort_by_date() {
     //else sort everything normally
 
     Transaction *p_sorted = p_head;
+    p_head = p_head->get_next();
     p_sorted->set_next(nullptr);
 
     while (p_head != nullptr) {
         Transaction *p_temp = p_head;
         // insert p_temp into p_sorted.
-        if (p_temp < p_sorted) {
+        std::cout << "p_temp " << p_temp->get_year() << " " << p_temp->get_month() << " " << p_temp->get_day() << std::endl;
+        std::cout << "p_sorted " << p_sorted->get_year() << " " << p_sorted->get_month() << " "
+                          << p_sorted->get_day() << std::endl;
+        if (*p_temp < *p_sorted) {
             // this means that we have to change p_sorted.
+            std::cout << "ptem<psorted" << std::endl;
             p_temp->set_next(p_sorted);
             p_sorted = p_temp;
         } else {
@@ -327,13 +332,17 @@ void History::sort_by_date() {
             while (p_insert != nullptr) {
                 // so basically it goes until there is no more after (so like 7-8-9 it will stop at 8 so 9 is counted).
                 if (p_insert->get_next() == nullptr) {
+                    std::cout << "nullptr" << std::endl;
                     //next one is nullptr (p_temp > all p_insert).
                     p_insert->set_next(p_temp);
+                    p_insert = p_insert->get_next();
+                    p_insert->set_next(nullptr);
                     break;
-                } else if ((p_insert < p_temp) && (p_temp < p_insert->get_next())) {
+                } else if ((*p_insert < *p_temp) && (*p_temp < *(p_insert->get_next()))) {
                     // so we are right in between.
                     p_temp->set_next(p_insert->get_next()); //get the handle
                     p_insert->set_next(p_temp); //remap tail
+                    std::cout << "insert actually" << std::endl;
                     break;
                 }
                 p_insert = p_insert->get_next();

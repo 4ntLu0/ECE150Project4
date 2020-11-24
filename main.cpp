@@ -8,8 +8,8 @@ unsigned int Transaction::assigned_trans_id = 0;
 int main() {
 
     Transaction *first = new Transaction("VRGO", 12, 02, 2019, true, 150, 10300.14);
-    Transaction *second = new Transaction("VRGO", 11, 02, 2019, true, 150, 10300.14);
-    Transaction *third = new Transaction("VRGO", 10,01,2020, true, 150,10300.14);
+    Transaction *second = new Transaction("VRGO", 11, 01, 2019, true, 150, 10300.14);
+    Transaction *third = new Transaction("VRGO", 18,01,2019, true, 150,10300.14);
     if (first<second) {
         std::cout<<"first<second"<<std::endl;
     } else {
