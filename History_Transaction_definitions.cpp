@@ -215,6 +215,7 @@ History::~History() {
         Transaction *p_temp{p_head};
         p_head = p_head->get_next();
         p_temp->set_next(nullptr);
+//        p_temp = nullptr; //is this line needed?
     }
 }
 
