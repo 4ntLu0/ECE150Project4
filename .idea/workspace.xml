@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="Project4" targetName="Project4" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -38,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,15 +50,25 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\antho\OneDrive - University of Waterloo\1a\ECE150\Project4\cmake-build-debug" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project4" TARGET_NAME="Project4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project4" RUN_TARGET_NAME="Project4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -80,7 +92,8 @@
       <workItem from="1606063627427" duration="157000" />
       <workItem from="1606064215577" duration="718000" />
       <workItem from="1606065574532" duration="799000" />
-      <workItem from="1606148902013" duration="26359000" />
+      <workItem from="1606148902013" duration="26967000" />
+      <workItem from="1606244401836" duration="4538000" />
     </task>
     <servers />
   </component>
@@ -100,22 +113,22 @@
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
     <state x="1015" y="478" key="FileChooserDialogImpl/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1605726483894" />
-    <state width="2425" height="413" key="GridCell.Tab.0.bottom" timestamp="1606194633982">
+    <state width="1191" height="413" key="GridCell.Tab.0.bottom" timestamp="1606246849793">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606194633982" />
-    <state width="2425" height="413" key="GridCell.Tab.0.center" timestamp="1606194633982">
+    <state width="1191" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
+    <state width="1191" height="413" key="GridCell.Tab.0.center" timestamp="1606246849793">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606194633982" />
-    <state width="2425" height="413" key="GridCell.Tab.0.left" timestamp="1606194633982">
+    <state width="1191" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
+    <state width="1191" height="413" key="GridCell.Tab.0.left" timestamp="1606246849793">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606194633982" />
-    <state width="2425" height="413" key="GridCell.Tab.0.right" timestamp="1606194633982">
+    <state width="1191" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
+    <state width="1191" height="413" key="GridCell.Tab.0.right" timestamp="1606246849793">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606194633982" />
+    <state width="1191" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
     <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1605713212330">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>

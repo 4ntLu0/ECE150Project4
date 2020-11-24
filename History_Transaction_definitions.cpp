@@ -92,7 +92,7 @@ bool Transaction::operator<(Transaction const &other) { //this is very important
             } else if (this->day == other.day) {
 //                std::cout<<"equal"<<std::endl;
                 //do we want to check trans id here??????? is this necessary?? ????????
-                if (this->trans_id < other.trans_id) {
+                if (this->trans_id < other.trans_id) { //double check later
                     return true;
                 } else {
                     return false;
@@ -202,7 +202,7 @@ void Transaction::print() {
 History::History() {
     p_head = nullptr;
 //    p_head->set_next(nullptr);
-    std::cout << "set pointers" << std::endl;
+//    std::cout << "set pointers" << std::endl;
 }
 
 
@@ -211,12 +211,20 @@ History::History() {
 //
 
 History::~History() {
-    while (p_head != nullptr) {
-        Transaction *p_temp{p_head};
-        p_head = p_head->get_next();
-        p_temp->set_next(nullptr);
-//        p_temp = nullptr; //is this line needed?
+    Transaction *p_temp{p_head};
+    if (p_temp!= nullptr) {
+        while (p_temp->get_next() != nullptr) {
+            p_head = p_temp->get_next();
+            delete p_temp;
+            p_temp = nullptr;
+            p_temp = p_head;
+        }
+
+        delete p_temp;
+        p_temp = nullptr;
+        p_head = nullptr;
     }
+
 }
 
 
@@ -225,8 +233,10 @@ History::~History() {
 //
 void History::read_history() {
     // reads everything from a file and then inserts it into a list!
+//    std::cout << "read history prev" << std::endl;
     ece150::open_file(); //opens file so that we can access.
     while (ece150::next_trans_entry()) { // while there is a next line
+//        std::cout << "read_history" << std::endl;
         Transaction *new_trans = new Transaction(
                 ece150::get_trans_symbol(),
                 ece150::get_trans_day(),
@@ -319,7 +329,7 @@ void History::sort_by_date() {
 
     while (p_head != nullptr) {
         Transaction *p_temp = p_head;
-        p_head=p_head->get_next();
+        p_head = p_head->get_next();
         // insert p_temp into p_sorted.
 //        std::cout << "p_temp " << p_temp->get_year() << " " << p_temp->get_month() << " " << p_temp->get_day()
 //                  << std::endl;
@@ -340,7 +350,7 @@ void History::sort_by_date() {
                     p_insert->set_next(p_temp);
                     p_temp->set_next(nullptr);
                     break;
-                }else if ((*p_insert < *p_temp) && (*p_temp < *(p_insert->get_next()))) {
+                } else if ((*p_insert < *p_temp) && (*p_temp < *(p_insert->get_next()))) {
                     // so we are right in between.
 //                    std::cout << "insert actually" << std::endl;
                     p_temp->set_next(p_insert->get_next()); //get the handle
@@ -359,14 +369,24 @@ void History::sort_by_date() {
 // TASK 7
 //
 void History::update_acb_cgl() {
+    // update acb, acb_per_share, share_balance, cgl.
+    // set to respective transactions in linked list.
+    // acb on buy: accumulate amount made for purchases
+    // acb on sell: subtract number of shares sold by acb/share from pervious transaction.
+    // acb/share on buy: divide acb by share balance
+    // acb/share on sell: divide acb (after computes) by share balance.
+    // share balance on buy: add share balance from previous transaction with number of shares purchased
+    // share balance on sell: previous share balance minus number of shares sold
 
+    // share balance is a running sum of number of shares.
 }
 
 
 // compute_cgl(): )Compute the ACB, and CGL.
 // TASK 8
 double History::compute_cgl(unsigned int year) {
-
+    // CGL, subtract nuymber of shares sold multiplied by the ACB?Share from the previous transaction (indiv cgl)
+    // sum cgl for each year.
 }
 
 
@@ -375,16 +395,12 @@ double History::compute_cgl(unsigned int year) {
 //
 void History::print() {
     Transaction *p_temp = p_head;
+    std::cout<<"========== BEGIN TRANSACTION HISTORY ============"<<std::endl;
     while (p_temp != nullptr) {
-        int year = p_temp->get_year();
-        int month = p_temp->get_month();
-        int day = p_temp->get_day();
-
-        int trans_id = p_temp->get_trans_id();
-
-        std::cout << year << " " << month << " " << day << " " << trans_id << std::endl;
+        p_temp->print();
         p_temp = p_temp->get_next();
     }
+    std::cout<<"========== END TRANSACTION HISTORY ============"<<std::endl;
 }
 
 
