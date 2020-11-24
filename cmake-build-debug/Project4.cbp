@@ -97,6 +97,9 @@
 		<Unit filename="/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/Transaction.hpp">
 			<Option target="Project4"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/cmake-build-debug/transaction_history.txt">
+			<Option target="Project4"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/main.cpp">
 			<Option target="Project4"/>
 		</Unit>
@@ -104,9 +107,6 @@
 			<Option target="Project4"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/project4.hpp">
-			<Option target="Project4"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/transaction_history.txt">
 			<Option target="Project4"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/CMakeLists.txt">

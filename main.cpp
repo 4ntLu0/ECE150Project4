@@ -37,8 +37,8 @@ int main() {
   std::cout << "[Sorted          ]:" << std::endl;
   trans_history.print();
 
-//  trans_history.update_acb_cgl();
-//  trans_history.print();
+  trans_history.update_acb_cgl();
+  trans_history.print();
 
   std::cout << "[CGL for 2018    ]: " << trans_history.compute_cgl(2018) << std::endl;
   std::cout << "[CGL for 2019    ]: " << trans_history.compute_cgl(2019) << std::endl;

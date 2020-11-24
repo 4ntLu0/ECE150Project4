@@ -379,6 +379,46 @@ void History::update_acb_cgl() {
     // share balance on sell: previous share balance minus number of shares sold
 
     // share balance is a running sum of number of shares.
+    Transaction *p_temp = p_head;
+    double running_acb{};
+    unsigned int running_share_balance{};
+    double running_acb_per_share{};
+    double running_cgl{};
+    while (p_temp != nullptr) {
+        if (p_temp->get_trans_type()) {
+            //true == buy;
+
+            //acb
+            running_acb += p_temp->get_amount(); // adds amount paid for shares to running acb.
+            p_temp->set_acb(running_acb);
+
+            //share balance
+            running_share_balance += p_temp->get_shares(); // adds shares from this transaction to share balance.
+            p_temp->set_share_balance(running_share_balance); // sets updated share balance.
+
+            //acb/share
+            running_acb_per_share = running_acb/running_share_balance;
+            p_temp->set_acb_per_share(running_acb_per_share);
+        } else {
+            // false == sell;
+
+            //cgl
+            running_cgl = p_temp->get_amount() - p_temp->get_shares() * running_acb_per_share;
+            p_temp->set_cgl(running_cgl);
+
+            //acb
+            running_acb -= p_temp->get_shares() * running_acb_per_share;
+
+            //share balance
+            running_share_balance -= p_temp->get_shares();
+            p_temp->set_share_balance(running_share_balance);
+
+            //acb/share
+            running_acb_per_share = running_acb/running_share_balance;
+            p_temp->set_acb_per_share(running_acb_per_share);
+        }
+        p_temp = p_temp->get_next();
+    }
 }
 
 
@@ -387,6 +427,19 @@ void History::update_acb_cgl() {
 double History::compute_cgl(unsigned int year) {
     // CGL, subtract nuymber of shares sold multiplied by the ACB?Share from the previous transaction (indiv cgl)
     // sum cgl for each year.
+
+    Transaction *p_temp = p_head;
+    double running_cgl{};
+    while (p_temp != nullptr) {
+        if ((p_temp->get_year()==year) && (!p_temp->get_trans_type())){
+            // year is equal and trans type is false (sell);
+            running_cgl+=p_temp->get_cgl();
+        }
+        p_temp = p_temp->get_next();
+    }
+
+    return running_cgl;
+
 }
 
 

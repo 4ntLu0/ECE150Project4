@@ -14,4 +14,4 @@ add_executable(Project4
         project4.cpp
         project4.hpp
         Transaction.hpp
-        transaction_history.txt)
+        cmake-build-debug/transaction_history.txt)

@@ -51,6 +51,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\antho\OneDrive - University of Waterloo\1a\ECE150\Project4\cmake-build-debug" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\antho\OneDrive - University of Waterloo\1a\ECE150\Project4\cmake-build-debug" />
     </key>
@@ -93,7 +96,7 @@
       <workItem from="1606064215577" duration="718000" />
       <workItem from="1606065574532" duration="799000" />
       <workItem from="1606148902013" duration="26967000" />
-      <workItem from="1606244401836" duration="4538000" />
+      <workItem from="1606244401836" duration="7281000" />
     </task>
     <servers />
   </component>
@@ -113,22 +116,22 @@
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
     <state x="1015" y="478" key="FileChooserDialogImpl/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1605726483894" />
-    <state width="1191" height="413" key="GridCell.Tab.0.bottom" timestamp="1606246849793">
+    <state width="2425" height="413" key="GridCell.Tab.0.bottom" timestamp="1606261326543">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="1191" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
-    <state width="1191" height="413" key="GridCell.Tab.0.center" timestamp="1606246849793">
+    <state width="2425" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
+    <state width="2425" height="413" key="GridCell.Tab.0.center" timestamp="1606261326543">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="1191" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
-    <state width="1191" height="413" key="GridCell.Tab.0.left" timestamp="1606246849793">
+    <state width="2425" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
+    <state width="2425" height="413" key="GridCell.Tab.0.left" timestamp="1606261326543">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="1191" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
-    <state width="1191" height="413" key="GridCell.Tab.0.right" timestamp="1606246849793">
+    <state width="2425" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
+    <state width="2425" height="413" key="GridCell.Tab.0.right" timestamp="1606261326543">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="1191" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606246849793" />
+    <state width="2425" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
     <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1605713212330">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
