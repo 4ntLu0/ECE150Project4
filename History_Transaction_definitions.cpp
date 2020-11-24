@@ -200,7 +200,9 @@ void Transaction::print() {
 //
 
 History::History() {
-    p_head->set_next(nullptr);
+    p_head = nullptr;
+//    p_head->set_next(nullptr);
+    std::cout << "set pointers" << std::endl;
 }
 
 
@@ -233,8 +235,9 @@ void History::read_history() {
                 ece150::get_trans_shares(),
                 ece150::get_trans_amount()
         );
-        History::insert(new_trans);
+        insert(new_trans);
     }
+    ece150::close_file();
 
 }
 
@@ -244,9 +247,21 @@ void History::read_history() {
 //
 void History::insert(Transaction *p_new_trans) {
     //adds something to the end (not really the end but in the middle lol)
-    Transaction *p_temp = p_head->get_next();
-    p_head->set_next(p_new_trans);
-    p_new_trans->set_next(p_temp);
+    assert(p_new_trans != nullptr);
+    p_new_trans->set_next(nullptr);
+    if (p_head == nullptr) {
+        std::cout<<"null p_head insert" <<std::endl;
+        std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " " << p_new_trans->get_day() << std::endl;
+        p_head = p_new_trans;
+//        p_head->set_next(nullptr);
+    } else {
+        while (p_head->get_next() != nullptr) {
+            std::cout << "within insert while: " << p_head->get_year() << " " << p_head->get_month() << " " << p_head->get_day() << std::endl;
+            p_head = p_head->get_next();
+        }
+        std::cout << "p_new_trans" << p_new_trans->get_year() << " " << p_new_trans->get_month() << " " << p_new_trans->get_day() << std::endl;
+        p_head->set_next(p_new_trans);
+    }
 }
 
 
@@ -294,7 +309,6 @@ void History::sort_by_date() {
 
     while (p_head != nullptr) {
         Transaction *p_temp = p_head;
-        p_head = p_head->get_next();
         // insert p_temp into p_sorted.
         if (p_temp < p_sorted) {
             // this means that we have to change p_sorted.
@@ -305,16 +319,21 @@ void History::sort_by_date() {
             while (p_insert != nullptr) {
                 // so basically it goes until there is no more after (so like 7-8-9 it will stop at 8 so 9 is counted).
                 if (p_insert->get_next() == nullptr) {
+                    //next one is nullptr (p_temp > all p_insert).
                     p_insert->set_next(p_temp);
-                } else if (p_insert < p_temp && p_temp < p_insert->get_next()) {
+                    break;
+                } else if ((p_insert < p_temp) && (p_temp < p_insert->get_next())) {
                     // so we are right in between.
-                    p_temp->set_next(p_insert->get_next());
-                    p_insert->set_next(p_temp);
+                    p_temp->set_next(p_insert->get_next()); //get the handle
+                    p_insert->set_next(p_temp); //remap tail
+                    break;
                 }
                 p_insert = p_insert->get_next();
             }
         }
+        p_head = p_head->get_next();
     }
+    p_head = p_sorted;
 }
 
 
@@ -337,7 +356,17 @@ double History::compute_cgl(unsigned int year) {
 //TASK 9
 //
 void History::print() {
+    Transaction *p_temp = p_head;
+    while (p_temp != nullptr) {
+        int year = p_temp->get_year();
+        int month = p_temp->get_month();
+        int day = p_temp->get_day();
 
+        int trans_id = p_temp->get_trans_id();
+
+        std::cout << year << " " << month << " " << day << " " << trans_id << std::endl;
+        p_temp = p_temp->get_next();
+    }
 }
 
 
