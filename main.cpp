@@ -8,8 +8,11 @@ unsigned int Transaction::assigned_trans_id = 0;
 int main() {
 
     Transaction *first = new Transaction("VRGO", 12, 02, 2019, true, 150, 10300.14);
-    Transaction *second = new Transaction("VRGO", 11, 01, 2019, true, 150, 10300.14);
-    Transaction *third = new Transaction("VRGO", 18,01,2019, true, 150,10300.14);
+    Transaction *second = new Transaction("VRGO", 18, 01, 2019, true, 150, 10300.14);
+    Transaction *third = new Transaction("VRGO", 11,01,2019, true, 150,10300.14);
+    Transaction *fourth = new Transaction("VRGO", 18, 10, 2020, true, 150, 10300.14);
+    Transaction *fifth = new Transaction("VRGO", 12, 1, 2020, true, 150, 10300.14);
+    Transaction *sixth = new Transaction("VRGO", 12, 02, 2019, true, 150, 10300.14);
     if (first<second) {
         std::cout<<"first<second"<<std::endl;
     } else {
@@ -19,8 +22,11 @@ int main() {
     History trans_history{};
 //    std::cout << "r u sure" <<std::endl;
     trans_history.insert(first);
-    trans_history.insert(second);
+    trans_history.insert(fourth);
     trans_history.insert(third);
+    trans_history.insert(second);
+    trans_history.insert(fifth);
+    trans_history.insert(sixth);
 //  trans_history.read_history();
 
 
