@@ -379,7 +379,7 @@ void History::sort_by_date() {
 // update_acb_cgl(): Updates the ACB and CGL values.
 // TASK 7
 //
-/*
+
 void History::update_acb_cgl() {
     // update acb, acb_per_share, share_balance, cgl.
     // set to respective transactions in linked list.
@@ -420,6 +420,7 @@ void History::update_acb_cgl() {
 
             //acb
             running_acb -= p_temp->get_shares() * running_acb_per_share;
+            p_temp->set_acb(running_acb);
 
             //share balance
             running_share_balance -= p_temp->get_shares();
@@ -431,8 +432,9 @@ void History::update_acb_cgl() {
         }
         p_temp = p_temp->get_next();
     }
-}*/
+}
 
+/*
 void History::update_acb_cgl() {
     Transaction * p_iterate = p_head;
     double acb{0};
@@ -464,7 +466,7 @@ void History::update_acb_cgl() {
         }
         p_iterate = p_iterate->get_next();
     }
-}
+}*/
 
 // compute_cgl(): )Compute the ACB, and CGL.
 // TASK 8
