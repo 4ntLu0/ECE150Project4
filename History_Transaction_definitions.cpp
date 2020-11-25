@@ -379,6 +379,7 @@ void History::sort_by_date() {
 // update_acb_cgl(): Updates the ACB and CGL values.
 // TASK 7
 //
+/*
 void History::update_acb_cgl() {
     // update acb, acb_per_share, share_balance, cgl.
     // set to respective transactions in linked list.
@@ -430,8 +431,40 @@ void History::update_acb_cgl() {
         }
         p_temp = p_temp->get_next();
     }
-}
+}*/
 
+void History::update_acb_cgl() {
+    Transaction * p_iterate = p_head;
+    double acb{0};
+    int shares_held{0};
+    double acb_share{0};
+    double cgl_holder{0};
+    double acb_holder{0};
+
+    while (p_iterate != nullptr) {
+        if (p_iterate->get_trans_type()) {
+            acb += p_iterate->get_amount();
+            p_iterate->set_acb(acb);
+            shares_held += p_iterate->get_shares();
+            p_iterate->set_share_balance(shares_held);
+            acb_share = acb/shares_held;
+            p_iterate->set_acb_per_share(acb_share);
+        }
+        else {
+            acb_holder = acb - (acb_share * p_iterate->get_shares());
+            acb = acb_holder;
+            p_iterate->set_acb(acb_holder);
+            shares_held -= p_iterate->get_shares();
+            p_iterate->set_share_balance(shares_held);
+            p_iterate->set_acb_per_share(acb_share);
+            cgl_holder = p_iterate->get_amount();
+            cgl_holder = cgl_holder - (acb_share*p_iterate->get_shares());
+            p_iterate->set_cgl(cgl_holder);
+
+        }
+        p_iterate = p_iterate->get_next();
+    }
+}
 
 // compute_cgl(): )Compute the ACB, and CGL.
 // TASK 8
