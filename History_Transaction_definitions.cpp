@@ -37,6 +37,12 @@ Transaction::Transaction(std::string ticker_symbol, unsigned int day_date, unsig
     trans_id = assigned_trans_id;
     assigned_trans_id++;
 
+    acb = 0;
+    acb_per_share = 0;
+    share_balance = 0;
+    cgl = 0;
+
+    p_next = nullptr;
 
 }
 
@@ -49,7 +55,7 @@ Transaction::~Transaction() {
     // destructor calls on delete, or on de-allocation of instance?
     // clear dynamically allocated things (p_next?)
 //    delete p_next;
-    p_next = nullptr;
+//    p_next = nullptr;
 
 }
 
@@ -203,18 +209,12 @@ History::History() {
 //
 
 History::~History() {
-    Transaction *p_temp{p_head};
-    if (p_temp != nullptr) {
-        while (p_temp->get_next() != nullptr) {
-            p_head = p_temp->get_next();
-            delete p_temp;
-            p_temp = nullptr;
-            p_temp = p_head;
-        }
-
-        delete p_temp;
-        p_temp = nullptr;
-        p_head = nullptr;
+    Transaction *p_delete{p_head};
+    while (p_head != nullptr) {
+        p_delete = p_head;
+        p_head = p_delete->get_next();
+        delete p_delete;
+        p_delete = nullptr;
     }
 
 }
@@ -347,10 +347,11 @@ void History::sort_by_date() {
                            ((p_insert->get_month()) == (p_temp->get_month())) &&
                            ((p_insert->get_day()) == (p_temp->get_day()))) {
                     // p_insert->get_next() not null and equal.
-                    if ((p_insert->get_trans_id())<(p_temp->get_trans_id())){
+                    if ((p_insert->get_trans_id()) < (p_temp->get_trans_id())) {
                         //p insert has the smaller trans ID, therefore must be inserted before.
                         //p_temp comes AFTER p_insert here.
-                        p_temp->set_next(p_insert->get_next()); // there is no case where p_insert->get_next() is null  see above
+                        p_temp->set_next(
+                                p_insert->get_next()); // there is no case where p_insert->get_next() is null  see above
                         p_insert->set_next(p_temp);
                     } else {
                         //p_temp has the smaller trans ID, so will be inserted BEFORE p_insert.
