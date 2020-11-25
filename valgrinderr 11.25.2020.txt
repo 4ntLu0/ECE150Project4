@@ -1,0 +1,252 @@
+==2966188== Memcheck, a memory error detector
+==2966188== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2966188== Using Valgrind-3.16.1 and LibVEX; rerun with -h for copyright info
+==2966188== Command: ./Project4 --leak-check=full --leak-resolution=high --track-origins=yes --vgdb=no
+==2966188== 
+[Starting history]:
+========== BEGIN TRANSACTION HISTORY ============
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C294E8: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C29502: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C25497: __mpn_extract_double (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C297C6: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2549C: __mpn_extract_double (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C297C6: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2A09D: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2A0C9: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2AF38: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2A119: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2A37F: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2AAE5: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C2AACB: __printf_fp_l (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C432AF: __vfprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C54849: __vsnprintf_internal (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4987861: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:92)
+==2966188==    by 0x49B9808: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1005)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x4C579B7: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C4C330: fwrite (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x49B991C: sputn (streambuf:458)
+==2966188==    by 0x49B991C: _M_put (streambuf_iterator.h:315)
+==2966188==    by 0x49B991C: __write<char> (locale_facets.h:121)
+==2966188==    by 0x49B991C: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1100)
+==2966188==    by 0x49C7DEE: put (locale_facets.h:2438)
+==2966188==    by 0x49C7DEE: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==2966188==    by 0x10AAD4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Use of uninitialised value of size 8
+==2966188==    at 0x49B86FB: int std::__int_to_char<char, unsigned long>(char*, unsigned long, char const*, std::_Ios_Fmtflags, bool) (locale_facets.tcc:803)
+==2966188==    by 0x49B8F6C: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (locale_facets.tcc:876)
+==2966188==    by 0x49C758A: put (locale_facets.h:2380)
+==2966188==    by 0x49C758A: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (ostream.tcc:73)
+==2966188==    by 0x10AB13: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Conditional jump or move depends on uninitialised value(s)
+==2966188==    at 0x49B870D: int std::__int_to_char<char, unsigned long>(char*, unsigned long, char const*, std::_Ios_Fmtflags, bool) (locale_facets.tcc:806)
+==2966188==    by 0x49B8F6C: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (locale_facets.tcc:876)
+==2966188==    by 0x49C758A: put (locale_facets.h:2380)
+==2966188==    by 0x49C758A: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (ostream.tcc:73)
+==2966188==    by 0x10AB13: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+==2966188== Syscall param write(buf) points to uninitialised byte(s)
+==2966188==    at 0x4CC6F67: write (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C572BC: _IO_file_write@@GLIBC_2.2.5 (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C565F5: new_do_write (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C583A8: _IO_do_write@@GLIBC_2.2.5 (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C58812: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x49C6848: sputc (streambuf:441)
+==2966188==    by 0x49C6848: sputc (streambuf:431)
+==2966188==    by 0x49C6848: std::ostream::put(char) (ostream.tcc:163)
+==2966188==    by 0x49C6A98: std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) (ostream:682)
+==2966188==    by 0x10ABE4: Transaction::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B4D5: History::print() (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==    by 0x10B73F: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188==  Address 0x4dba0c8 is 56 bytes inside a block of size 1,024 alloc'd
+==2966188==    at 0x483A77F: malloc (vg_replace_malloc.c:307)
+==2966188==    by 0x4C4AE03: _IO_file_doallocate (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C5970F: _IO_doallocbuf (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C588A7: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C57955: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x4C4C330: fwrite (in /usr/lib/libc-2.32.so)
+==2966188==    by 0x49C6DA3: sputn (streambuf:458)
+==2966188==    by 0x49C6DA3: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+==2966188==    by 0x49C6DA3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+==2966188==    by 0x49C715D: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (ostream:611)
+==2966188==    by 0x10B71E: main (in /home/seen/Downloads/git/ECE150Project4/Project4)
+==2966188== 
+   0 VGRO   10    1 2018   Buy   150   10300.14       0.00    0      0.000      0.000
+   1 VGRO   24    2 2018   Buy    85    7423.05       0.00    0      0.000      0.000
+   2 VGRO    8    8 2018   Buy    43    3367.76       0.00    0      0.000      0.000
+   3 VGRO   11   11 2018   Buy    78    7028.58       0.00    0      0.000      0.000
+   4 VGRO    8   12 2018   Sell   55    5958.15       0.00    0      0.000      0.000
+   5 VGRO   22   12 2018   Sell   80    2817.60       0.00    0      0.000      0.000
+   6 VGRO    4    1 2019   Buy    65    3257.15       0.00    0      0.000      0.000
+   7 VGRO    7    5 2019   Buy    65    4557.15       0.00    0      0.000      0.000
+   8 VGRO   14    6 2019   Sell   80    4451.20       0.00    0      0.000      0.000
+   9 VGRO   16    7 2019   Buy    25    1752.75       0.00    0      0.000      0.000
+  10 VGRO   19    7 2019   Sell   90    6780.60       0.00    0      0.000      0.000
+  11 VGRO   20   10 2019   Buy   100    9011.00       0.00    0      0.000      0.000
+========== END TRANSACTION HISTORY ============
+[Sorted          ]:
+========== BEGIN TRANSACTION HISTORY ============
+   0 VGRO   10    1 2018   Buy   150   10300.14       0.00    0      0.000      0.000
+   1 VGRO   24    2 2018   Buy    85    7423.05       0.00    0      0.000      0.000
+   2 VGRO    8    8 2018   Buy    43    3367.76       0.00    0      0.000      0.000
+   3 VGRO   11   11 2018   Buy    78    7028.58       0.00    0      0.000      0.000
+   4 VGRO    8   12 2018   Sell   55    5958.15       0.00    0      0.000      0.000
+   5 VGRO   22   12 2018   Sell   80    2817.60       0.00    0      0.000      0.000
+   6 VGRO    4    1 2019   Buy    65    3257.15       0.00    0      0.000      0.000
+   7 VGRO    7    5 2019   Buy    65    4557.15       0.00    0      0.000      0.000
+   8 VGRO   14    6 2019   Sell   80    4451.20       0.00    0      0.000      0.000
+   9 VGRO   16    7 2019   Buy    25    1752.75       0.00    0      0.000      0.000
+  10 VGRO   19    7 2019   Sell   90    6780.60       0.00    0      0.000      0.000
+  11 VGRO   20   10 2019   Buy   100    9011.00       0.00    0      0.000      0.000
+========== END TRANSACTION HISTORY ============
+========== BEGIN TRANSACTION HISTORY ============
+   0 VGRO   10    1 2018   Buy   150   10300.14   10300.14  150     68.668      0.000
+   1 VGRO   24    2 2018   Buy    85    7423.05   17723.19  235     75.418      0.000
+   2 VGRO    8    8 2018   Buy    43    3367.76   21090.95  278     75.867      0.000
+   3 VGRO   11   11 2018   Buy    78    7028.58   28119.53  356     78.987      0.000
+   4 VGRO    8   12 2018   Sell   55    5958.15       0.00  301     78.987   1613.841
+   5 VGRO   22   12 2018   Sell   80    2817.60       0.00  221     78.987  -3501.396
+   6 VGRO    4    1 2019   Buy    65    3257.15   20713.38  286     72.424      0.000
+   7 VGRO    7    5 2019   Buy    65    4557.15   25270.53  351     71.996      0.000
+   8 VGRO   14    6 2019   Sell   80    4451.20       0.00  271     71.996  -1308.464
+   9 VGRO   16    7 2019   Buy    25    1752.75   21263.61  296     71.837      0.000
+  10 VGRO   19    7 2019   Sell   90    6780.60       0.00  206     71.837    315.313
+  11 VGRO   20   10 2019   Buy   100    9011.00   23809.32  306     77.808      0.000
+========== END TRANSACTION HISTORY ============
+[CGL for 2018    ]: -1887.555
+[CGL for 2019    ]: -993.151
+==2966188== 
+==2966188== HEAP SUMMARY:
+==2966188==     in use at exit: 0 bytes in 0 blocks
+==2966188==   total heap usage: 59 allocs, 59 frees, 87,040 bytes allocated
+==2966188== 
+==2966188== All heap blocks were freed -- no leaks are possible
+==2966188== 
+==2966188== Use --track-origins=yes to see where uninitialised values come from
+==2966188== For lists of detected and suppressed errors, rerun with: -s
+==2966188== ERROR SUMMARY: 1596 errors from 15 contexts (suppressed: 0 from 0)

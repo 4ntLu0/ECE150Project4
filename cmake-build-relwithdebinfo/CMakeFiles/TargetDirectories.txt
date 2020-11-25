@@ -1,3 +1,0 @@
-/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/cmake-build-relwithdebinfo/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/cmake-build-relwithdebinfo/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/cmake-build-relwithdebinfo/CMakeFiles/Project4.dir

@@ -1,6 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/mnt/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4"
-CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
-  CMake 3.17 or higher is required.  You are running version 3.16.3
-
-
--- Configuring incomplete, errors occurred!
