@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -Os -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/Project4.dir/History_Transaction_definitions.cpp.o CMakeFiles/Project4.dir/main.cpp.o CMakeFiles/Project4.dir/project4.cpp.o  -o Project4.exe -Wl,--out-implib,libProject4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

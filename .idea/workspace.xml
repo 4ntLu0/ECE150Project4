@@ -2,12 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project4" targetName="Project4" />
+      <config projectName="Project" targetName="Project4" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release-Cygwin" CONFIG_NAME="Release" TOOLCHAIN_NAME="Cygwin" />
+      <configuration PROFILE_NAME="RelWithDebInfo" CONFIG_NAME="RelWithDebInfo" />
+      <configuration PROFILE_NAME="MinSizeRel" CONFIG_NAME="MinSizeRel" />
+      <configuration PROFILE_NAME="Default" />
+      <configuration PROFILE_NAME="WSL" CONFIG_NAME="Release" TOOLCHAIN_NAME="WSL" />
     </configurations>
   </component>
   <component name="ChangeListManager">
@@ -23,7 +28,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -40,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,30 +53,26 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\antho\OneDrive - University of Waterloo\1a\ECE150\Project4" />
       <recent name="C:\Users\antho\OneDrive - University of Waterloo\1a\ECE150\Project4\cmake-build-debug" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\antho\OneDrive - University of Waterloo\1a\ECE150\Project4\cmake-build-debug" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project4" TARGET_NAME="Project4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project4" RUN_TARGET_NAME="Project4">
+    <configuration name="Project4" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$/cmake-build-debug" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="Project4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="Project4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -96,7 +97,11 @@
       <workItem from="1606064215577" duration="718000" />
       <workItem from="1606065574532" duration="799000" />
       <workItem from="1606148902013" duration="26967000" />
-      <workItem from="1606244401836" duration="7281000" />
+      <workItem from="1606244401836" duration="7645000" />
+      <workItem from="1606262386298" duration="931000" />
+      <workItem from="1606265023692" duration="926000" />
+      <workItem from="1606265958508" duration="3920000" />
+      <workItem from="1606310844653" duration="1243000" />
     </task>
     <servers />
   </component>
@@ -104,34 +109,42 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606149378789">
+    <state x="543" y="302" key="#SSH_Configurations" timestamp="1606265478348">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state x="690" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606149378789" />
+    <state x="543" y="302" key="#SSH_Configurations/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606265478348" />
+    <state x="503" y="323" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606267047749">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state x="503" y="323" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606267047749" />
+    <state x="989" y="530" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606265641770">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state x="989" y="530" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606265641770" />
     <state x="443" y="187" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606064403715">
       <screen x="0" y="0" width="1527" height="900" />
     </state>
     <state x="443" y="187" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1527.900@0.0.1527.900" timestamp="1606064403715" />
-    <state x="1015" y="478" key="FileChooserDialogImpl" timestamp="1605726483894">
+    <state x="1015" y="478" key="FileChooserDialogImpl" timestamp="1606265953103">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state x="1015" y="478" key="FileChooserDialogImpl/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1605726483894" />
-    <state width="2425" height="413" key="GridCell.Tab.0.bottom" timestamp="1606261326543">
+    <state x="1015" y="478" key="FileChooserDialogImpl/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606265953103" />
+    <state width="2425" height="413" key="GridCell.Tab.0.bottom" timestamp="1606268888354">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
-    <state width="2425" height="413" key="GridCell.Tab.0.center" timestamp="1606261326543">
+    <state width="2425" height="413" key="GridCell.Tab.0.bottom/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606268888354" />
+    <state width="2425" height="413" key="GridCell.Tab.0.center" timestamp="1606268888353">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
-    <state width="2425" height="413" key="GridCell.Tab.0.left" timestamp="1606261326543">
+    <state width="2425" height="413" key="GridCell.Tab.0.center/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606268888353" />
+    <state width="2425" height="413" key="GridCell.Tab.0.left" timestamp="1606268888353">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
-    <state width="2425" height="413" key="GridCell.Tab.0.right" timestamp="1606261326543">
+    <state width="2425" height="413" key="GridCell.Tab.0.left/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606268888353" />
+    <state width="2425" height="413" key="GridCell.Tab.0.right" timestamp="1606268888353">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
-    <state width="2425" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606261326543" />
+    <state width="2425" height="413" key="GridCell.Tab.0.right/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606268888353" />
     <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1605713212330">
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
@@ -140,15 +153,19 @@
       <screen x="0" y="0" width="2468" height="1440" />
     </state>
     <state width="640" height="476" key="ImportCMakeProjectWizard.topPanel/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1605713212330" />
-    <state x="332" y="79" key="SettingsEditor" timestamp="1606065667292">
-      <screen x="0" y="0" width="1527" height="900" />
+    <state x="470" y="301" key="SettingsEditor" timestamp="1606267103562">
+      <screen x="0" y="0" width="2468" height="1440" />
     </state>
     <state x="332" y="79" key="SettingsEditor/0.0.1527.900@0.0.1527.900" timestamp="1606065667292" />
-    <state x="1352" y="370" key="SettingsEditor/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1605726495359" />
+    <state x="470" y="301" key="SettingsEditor/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606267103562" />
     <state x="459" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1606064428460">
       <screen x="0" y="0" width="1527" height="900" />
     </state>
     <state x="459" y="275" key="com.intellij.ide.util.TipDialog/0.0.1527.900@0.0.1527.900" timestamp="1606064428460" />
+    <state x="897" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1606311033672">
+      <screen x="0" y="0" width="2468" height="1440" />
+    </state>
+    <state x="897" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2468.1440/-1366.569.1366.738@0.0.2468.1440" timestamp="1606311033672" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

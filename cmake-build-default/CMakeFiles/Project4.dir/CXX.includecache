@@ -1,0 +1,56 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/History.hpp
+iomanip
+-
+iostream
+-
+string
+-
+Transaction.hpp
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/Transaction.hpp
+
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/History_Transaction_definitions.cpp
+cassert
+-
+iomanip
+-
+iostream
+-
+project4.hpp
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/project4.hpp
+History.hpp
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/History.hpp
+Transaction.hpp
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/Transaction.hpp
+
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/Transaction.hpp
+iomanip
+-
+iostream
+-
+string
+-
+
+/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/project4.hpp
+cassert
+-
+fstream
+-
+iomanip
+-
+iostream
+-
+sstream
+-
+string
+-
+vector
+-
+

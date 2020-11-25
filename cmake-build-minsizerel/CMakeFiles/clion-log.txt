@@ -1,0 +1,4 @@
+C:\Users\antho\AppData\Local\JetBrains\CLion2020.2\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=MinSizeRel -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /cygdrive/c/Users/antho/OneDrive - University of Waterloo/1a/ECE150/Project4/cmake-build-minsizerel

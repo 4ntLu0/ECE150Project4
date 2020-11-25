@@ -89,14 +89,6 @@ bool Transaction::operator<(Transaction const &other) { //this is very important
                 // left day is less!
 //                std::cout<<"true"<<std::endl;
                 return true;
-            } else if (this->day == other.day) {
-//                std::cout<<"equal"<<std::endl;
-                //do we want to check trans id here??????? is this necessary?? ????????
-                if (this->trans_id < other.trans_id) { //double check later
-                    return true;
-                } else {
-                    return false;
-                }
             } else {
                 return false;
             }
@@ -212,7 +204,7 @@ History::History() {
 
 History::~History() {
     Transaction *p_temp{p_head};
-    if (p_temp!= nullptr) {
+    if (p_temp != nullptr) {
         while (p_temp->get_next() != nullptr) {
             p_head = p_temp->get_next();
             delete p_temp;
@@ -350,6 +342,25 @@ void History::sort_by_date() {
                     p_insert->set_next(p_temp);
                     p_temp->set_next(nullptr);
                     break;
+                    // need a case to check if they're the same day.
+                } else if (((p_insert->get_year()) == (p_temp->get_year())) &&
+                           ((p_insert->get_month()) == (p_temp->get_month())) &&
+                           ((p_insert->get_day()) == (p_temp->get_day()))) {
+                    // p_insert->get_next() not null and equal.
+                    if ((p_insert->get_trans_id())<(p_temp->get_trans_id())){
+                        //p insert has the smaller trans ID, therefore must be inserted before.
+                        //p_temp comes AFTER p_insert here.
+                        p_temp->set_next(p_insert->get_next()); // there is no case where p_insert->get_next() is null  see above
+                        p_insert->set_next(p_temp);
+                    } else {
+                        //p_temp has the smaller trans ID, so will be inserted BEFORE p_insert.
+                        // swap the two.
+                        // p_temp -> set_next() should be p_insert.
+                        // p_insert should be p_temp.
+                        Transaction *p_swap = p_insert;
+                        p_insert = p_temp;
+                        p_temp->set_next(p_swap);
+                    }
                 } else if ((*p_insert < *p_temp) && (*p_temp < *(p_insert->get_next()))) {
                     // so we are right in between.
 //                    std::cout << "insert actually" << std::endl;
@@ -397,7 +408,7 @@ void History::update_acb_cgl() {
             p_temp->set_share_balance(running_share_balance); // sets updated share balance.
 
             //acb/share
-            running_acb_per_share = running_acb/running_share_balance;
+            running_acb_per_share = running_acb / running_share_balance;
             p_temp->set_acb_per_share(running_acb_per_share);
         } else {
             // false == sell;
@@ -414,7 +425,7 @@ void History::update_acb_cgl() {
             p_temp->set_share_balance(running_share_balance);
 
             //acb/share
-            running_acb_per_share = running_acb/running_share_balance;
+            running_acb_per_share = running_acb / running_share_balance;
             p_temp->set_acb_per_share(running_acb_per_share);
         }
         p_temp = p_temp->get_next();
@@ -431,9 +442,9 @@ double History::compute_cgl(unsigned int year) {
     Transaction *p_temp = p_head;
     double running_cgl{};
     while (p_temp != nullptr) {
-        if ((p_temp->get_year()==year) && (!p_temp->get_trans_type())){
+        if ((p_temp->get_year() == year) && (!p_temp->get_trans_type())) {
             // year is equal and trans type is false (sell);
-            running_cgl+=p_temp->get_cgl();
+            running_cgl += p_temp->get_cgl();
         }
         p_temp = p_temp->get_next();
     }
@@ -448,12 +459,12 @@ double History::compute_cgl(unsigned int year) {
 //
 void History::print() {
     Transaction *p_temp = p_head;
-    std::cout<<"========== BEGIN TRANSACTION HISTORY ============"<<std::endl;
+    std::cout << "========== BEGIN TRANSACTION HISTORY ============" << std::endl;
     while (p_temp != nullptr) {
         p_temp->print();
         p_temp = p_temp->get_next();
     }
-    std::cout<<"========== END TRANSACTION HISTORY ============"<<std::endl;
+    std::cout << "========== END TRANSACTION HISTORY ============" << std::endl;
 }
 
 
